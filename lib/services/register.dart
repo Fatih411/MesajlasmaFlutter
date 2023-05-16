@@ -1,9 +1,10 @@
-import 'package:flutter_haberlesme/model/usersModel';
 import 'package:http/http.dart' as http;
+
+import '../model/usersModel.dart';
 
 class RegisterServices {
   static void registerUser(UserModel userModel) async {
-    final String url = "https://localhost:44373/api/kullanici/kayitOl";
+    final String url = "https://localhost:44313/api/Users/register";
     var response = await http.post(Uri.parse(url), body: {
       "isim": userModel.isim.toString(),
       "soyad": userModel.soyad.toString(),

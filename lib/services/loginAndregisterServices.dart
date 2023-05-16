@@ -1,16 +1,19 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_haberlesme/model/usersModel';
+
 import 'package:flutter_haberlesme/pages/iUsers.dart';
 import 'package:http/http.dart' as http;
+
+import '../model/usersModel.dart';
 
 class LoginAndRegisterServices {
   static Future<dynamic> login(
       String? name, String? password, BuildContext context) async {
     try {
       final String url =
-          "https://localhost:44373/api/kullanici/kullaniciGiris?isim=${name}&sifre=${password}";
+          "https://localhost:44313/api/Users/login?name=${name}&password=${password}";
+
       final response = await http.get(Uri.parse(url));
       final list = (jsonDecode(response.body) as List)
           .map((e) => UserModel.fromJson(e))

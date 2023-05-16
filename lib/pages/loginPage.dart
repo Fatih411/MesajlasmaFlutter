@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_haberlesme/contants/contants.dart';
-import 'package:flutter_haberlesme/model/usersModel';
+
 import 'package:flutter_haberlesme/services/register.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../model/usersModel.dart';
 import '../services/loginAndregisterServices.dart';
 
 class LoginPage extends StatelessWidget {

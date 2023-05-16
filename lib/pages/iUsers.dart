@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_haberlesme/contants/contants.dart';
-import 'package:flutter_haberlesme/model/usersModel';
+import 'package:flutter_haberlesme/model/usersModel.dart';
 import 'package:flutter_haberlesme/pages/messagePage.dart';
 import 'package:flutter_haberlesme/services/usersServices.dart';
 
@@ -33,7 +33,6 @@ class _UsersState extends State<Users> {
 
   @override
   Widget build(BuildContext context) {
-    UserServices.loginUsers(widget.getId);
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
